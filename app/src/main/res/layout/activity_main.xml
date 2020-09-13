@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ACD7FA"
+    tools:context=".MainActivity">
+
+    <view
+        android:id="@+id/gameView"
+        class="com.example.spiderhackathonapplication.GameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rel1"/>
+
+    <view
+        android:id="@+id/carView"
+        class="com.example.spiderhackathonapplication.CarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rel1"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="#fff"
+        android:padding="10dp">
+        <Button
+            android:id="@+id/drive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="drive"
+            android:textColor="#fff"
+            android:background="#F44336" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/drive"
+            android:layout_marginLeft="30dp"
+            android:text="reset"
+            android:textColor="#fff"
+            android:background="#F44336" />
+    </RelativeLayout>
+
+</RelativeLayout>
